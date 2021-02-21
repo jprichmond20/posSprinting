@@ -1,4 +1,4 @@
-package edu.coe.pos3
+package edu.coe.richmond
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

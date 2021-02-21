@@ -1,4 +1,4 @@
-package edu.coe.pos3
+package edu.coe.richmond
 
 import org.junit.Test
 
