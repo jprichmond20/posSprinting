@@ -11,8 +11,8 @@ class AdminMode : AppCompatActivity() {
         setContentView(R.layout.adminmode)
         val i = getIntent()
         val txt = i.extras!!.getString("TEXT")
-        val txtBox = findViewById<TextView>(R.id.IntentTxt)
-        txtBox.text = txt
+        //val txtBox = findViewById<TextView>(R.id.IntentTxt)
+        //txtBox.text = txt
 
     }
 
