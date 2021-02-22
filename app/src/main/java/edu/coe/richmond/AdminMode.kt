@@ -9,8 +9,8 @@ class AdminMode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.adminmode)
-        val i = getIntent()
-        val txt = i.extras!!.getString("TEXT")
+        //val i = intent
+        //val txt = i.extras!!.getString("TEXT")
         //val txtBox = findViewById<TextView>(R.id.IntentTxt)
         //txtBox.text = txt
 
