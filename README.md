@@ -6,3 +6,7 @@ The main roadblock for me this week was finding out how to custom module worked 
 I would like to go through and try to make my own custom controller from scratch and learn to access them from outside of the object. 
 
 All pushes were lost when I had trouble renaming the package so it was all in one when I moved it to a new project, sorry!
+  
+There is now a second activity that can open and return to the main screen
+
+Working on implementation of SQLite DB at the moment
