@@ -5,7 +5,19 @@
     android:orientation="vertical">
 
     <edu.coe.richmond.UpDownBox
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <edu.coe.richmond.UpDownBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <edu.coe.richmond.UpDownBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <edu.coe.richmond.UpDownBox
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </edu.coe.richmond.UpDownBox>
@@ -17,7 +29,7 @@
 
         <Button
             android:id="@+id/adminBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="launchActivity"
