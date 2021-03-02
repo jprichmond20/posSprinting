@@ -20,6 +20,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.poslayout)
         initView(this)
         }
+
+    override fun onStart() {
+        super.onStart()
+        val data = db!!.readData()
+        //foodResult!!.text = ""
+        for (i in 0 until data.size) {
+            foodResult!!.append(data[i].name + " " + data[i].price + "\n")
+        }
+    }
     private fun initView(c: Context) {
         db = SQLHelper(c)
     }
@@ -29,16 +38,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun addControl(v: View){
-        var scroll = findViewById<View>(R.id.scrollingll) as LinearLayout
-        var leftItem = findViewById<View>(R.id.editLeft) as EditText
-        var rightItem = findViewById<View>(R.id.editRight)as EditText
+        var scroller = findViewById<View>(R.id.scroller) as LinearLayout
+        var txtValue = findViewById<TextView>(R.id.txtValue)
+        var downButton = findViewById<Button>(R.id.downButton)
+        var upButton = findViewById<Button>(R.id.upButton)
 
         // Toast.makeText(this,item.text.toString(), Toast.LENGTH_LONG).show()
         var newControl = UpDownBox(this)
-        newControl.leftOption = leftItem!!.text.toString()
-        newControl.rightOption = rightItem!!.text.toString()
 
-        scroll.addView(newControl)
+        scroller.addView(newControl)
     }
 
     }
