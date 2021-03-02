@@ -12,11 +12,11 @@
         <activity android:name="edu.coe.richmond.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="edu.coe.richmond.AdminMode">
+        <activity android:name="edu.coe.richmond.AdminMode"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="edu.coe.richmond.AdminMode"/>
                 <category android:name="android.intent.category.DEFAULT"/>

@@ -13,6 +13,8 @@ class UpDownBox : LinearLayout, View.OnClickListener {
     private var mUpButton: Button? = null
     private var mValue: TextView? = null
     private var startVal = 0
+    private var foodVal: TextView? = null
+    private var startFood = "Candy"
 
     constructor(context: Context) : super(context) {
         initializeViews(context)
@@ -46,11 +48,12 @@ class UpDownBox : LinearLayout, View.OnClickListener {
         mValue!!.text = startVal.toString()
         mDownButton!!.setOnClickListener(this)
         mUpButton!!.setOnClickListener(this)
+        foodVal = findViewById<View>(R.id.foodTxt) as TextView
+        foodVal!!.text = startFood.toString()
     }
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-
     }
 
     var value: Int
