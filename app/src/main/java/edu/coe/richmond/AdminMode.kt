@@ -44,7 +44,7 @@ class AdminMode : AppCompatActivity() {
         if (editTextFoodName!!.text.toString().isNotEmpty() &&
                 editTextPrice!!.text.toString().isNotEmpty()
         ) {
-            val item = Item(editTextFoodName!!.text.toString(), editTextPrice!!.text.toString().toInt())
+            val item = Item(editTextFoodName!!.text.toString(), editTextPrice!!.text.toString().toDouble())
             db!!.insertData(item)
             clearField()
         }
@@ -71,7 +71,7 @@ class AdminMode : AppCompatActivity() {
     }
     fun updateData(v: View) {
         if (editTextFoodName!!.text.toString().isNotEmpty() && editTextPrice!!.text.toString().isNotEmpty()) {
-            val item = Item(editTextFoodName!!.text.toString(), editTextPrice!!.text.toString().toInt())
+            val item = Item(editTextFoodName!!.text.toString(), editTextPrice!!.text.toString().toDouble())
             db!!.updateData(item)
             clearField()
         }
@@ -85,7 +85,7 @@ class AdminMode : AppCompatActivity() {
     }
     fun deleteData(v: View) {
         if (editTextFoodName!!.text.toString().isNotEmpty() && editTextPrice!!.text.toString().isNotEmpty()) {
-            val item = Item(editTextFoodName!!.text.toString(), editTextPrice!!.text.toString().toInt())
+            val item = Item(editTextFoodName!!.text.toString(), editTextPrice!!.text.toString().toDouble())
             db!!.deleteData(item)
             clearField()
         }

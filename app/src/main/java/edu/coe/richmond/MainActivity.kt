@@ -6,6 +6,8 @@ import android.content.Intent
 import android.view.View
 import android.content.Context
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.view.isNotEmpty
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +24,9 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         val data = db!!.readData()
         var scroller = findViewById<View>(R.id.scroller) as LinearLayout
-        //scroller.
+        while (scroller.isNotEmpty()) {
+            scroller.removeAllViews()
+        }
         for (i in 0 until data.size) {
             var name = data[i].foodName.toString()
             var price = data[i].foodPrice.toString()
@@ -31,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun initView(c: Context) {
         db = SQLHelper(c)
+        var costText: TextView? = findViewById(R.id.costText)
     }
     fun launchActivity(v: View) {
         var myIntent = Intent(this, AdminMode::class.java)

@@ -50,7 +50,7 @@ class SQLHelper(var context: Context) : SQLiteOpenHelper(context, DATABASENAME, 
             do {
                 val item = Item()
                 item.name = result.getString(result.getColumnIndex(COL_NAME)).toString()
-                item.price = result.getString(result.getColumnIndex(COL_PRICE)).toInt()
+                item.price = result.getString(result.getColumnIndex(COL_PRICE)).toDouble()
                 list.add(item)
             }
             while (result.moveToNext())
