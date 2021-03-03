@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val data = db!!.readData()
-
+        var scroller = findViewById<View>(R.id.scroller) as LinearLayout
+        //scroller.
         for (i in 0 until data.size) {
             var name = data[i].foodName.toString()
             var price = data[i].foodPrice.toString()
