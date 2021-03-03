@@ -15,4 +15,6 @@ FINAL REVIEW:
 I made a lot of progress in the final sprint by fixing the DB implementation and the dynamic creation/removal/changing of menu options. Unfortunately after the refactor I did not have time in the last sprint to get to the total cost function (coming soon hopefully). I am happy with the current code and the implementation of the SQL database to control the custom controls. 
 
 To run the program, start the emulator and simply go to admin mode using the button, enter a food name and cost in double format (X.YZ) and click add. Similarly for update, enter the food name and you can change the price. This will automatically update the main activity when you return to it with custom controls for everything currently in the database.
+
+Collaborated with: Takamaru Miki
 Thanks!
