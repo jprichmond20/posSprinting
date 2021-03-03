@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import android.widget.Toast
 import android.database.sqlite.SQLiteStatement as SQLiteStatement1
 
@@ -31,6 +32,7 @@ class SQLHelper(var context: Context) : SQLiteOpenHelper(context, DATABASENAME, 
         val contentValues = ContentValues()
         contentValues.put(COL_NAME, item.name)
         contentValues.put(COL_PRICE, item.price)
+        //Log.i("Price", item.price.toString())
         val result = database.insert(TABLENAME, null, contentValues)
         if (result == (0).toLong()) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()

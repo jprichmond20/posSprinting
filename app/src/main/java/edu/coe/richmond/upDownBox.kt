@@ -70,4 +70,9 @@ class UpDownBox : LinearLayout, View.OnClickListener {
         }
         mValue!!.text = `val`.toString()
     }
+    var foodText: String
+        get() = foodVal!!.text.toString()
+        set(v) {
+            foodVal!!.text = v.toString()
+        }
 }
